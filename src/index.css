@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-16px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadein {
+  animation: fadein 1s ease-out;
+}
+
+.animate-fadein2 {
+  animation: fadein 1.5s ease-out;
+}
+
+@keyframes navbarfade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-navbarfade {
+  animation: navbarfade 1s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s steps(2, start) infinite;
+}
+
+/* ...existing code... */
+
+/* Bubble pulse animasi */
+@keyframes pulse-bubble {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.35;
+  }
+}
+
+.animate-pulse-bubble {
+  animation: pulse-bubble 3s ease-in-out infinite;
+}
+
+/* Badge bounce lebih smooth */
+@keyframes bounce-smooth {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-bounce-smooth {
+  animation: bounce-smooth 1.2s infinite;
+}
+
+/* Button tilt saat hover */
+.tilt-hover {
+  transition: transform 0.3s cubic-bezier(.4, 0, .2, 1), box-shadow 0.3s;
+}
+
+.tilt-hover:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 32px 0 rgba(30, 58, 138, 0.25);
+}
+
+/* Avatar shadow animasi */
+@keyframes avatar-shadow {
+
+  0%,
+  100% {
+    box-shadow: 0 4px 24px 0 rgba(30, 58, 138, 0.25);
+  }
+
+  50% {
+    box-shadow: 0 8px 32px 0 rgba(30, 58, 138, 0.35);
+  }
+}
+
+.animate-avatar-shadow {
+  animation: avatar-shadow 2.5s ease-in-out infinite;
+}
+
+
+/* Tambahkan kode berikut ke file index.css yang sudah ada */
+
+.contact-container {
+  max-width: 4xl;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--contact-title-color);
+}
+
+.contact-subtitle {
+  color: var(--contact-subtitle-color);
+  margin-bottom: 2rem;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: var(--contact-card-bg);
+  border: 1px solid var(--contact-card-border);
+  transition: all 0.3s ease;
+  min-width: 200px;
+  max-width: 250px;
+  flex: 1;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  margin-bottom: 1rem;
+  color: var(--contact-icon-color);
+}
+
+.contact-label {
+  font-size: 0.875rem;
+  color: var(--contact-label-color);
+  margin-bottom: 0.5rem;
+}
+
+.contact-value {
+  font-weight: 500;
+  color: var(--contact-value-color);
+}
+
+.contact-reveal-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  background: var(--contact-btn-bg);
+  color: var(--contact-btn-color);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--contact-btn-shadow);
+}
+
+.contact-reveal-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--social-bg);
+  color: var(--social-color);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  color: var(--social-hover-color);
+}
+
+.contact-hidden {
+  filter: blur(6px);
+  user-select: none;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Variabel untuk tema terang */
+.light-theme {
+  --contact-title-color: #4c1d95;
+  --contact-subtitle-color: #374151;
+  --contact-card-bg: rgba(255, 255, 255, 0.7);
+  --contact-card-border: rgba(124, 58, 237, 0.06);
+  --contact-icon-color: #7c3aed;
+  --contact-label-color: #6b7280;
+  --contact-value-color: #111827;
+  --contact-btn-bg: linear-gradient(90deg, #a78bfa, #7c3aed);
+  --contact-btn-color: #fff;
+  --contact-btn-shadow: 0 6px 20px rgba(124, 58, 237, 0.18);
+  --social-bg: #f3e8ff;
+  --social-color: #6b21a8;
+  --social-hover-color: #4c1d95;
+}
+
+/* Variabel untuk tema gelap (default) */
+:root {
+  --contact-title-color: #cdb8ff;
+  --contact-subtitle-color: #d6cfee;
+  --contact-card-bg: rgba(255, 255, 255, 0.02);
+  --contact-card-border: rgba(167, 139, 250, 0.05);
+  --contact-icon-color: #a78bfa;
+  --contact-label-color: #bfb6e8;
+  --contact-value-color: #fff;
+  --contact-btn-bg: linear-gradient(90deg, #7c3aed, #a78bfa);
+  --contact-btn-color: #fff;
+  --contact-btn-shadow: 0 8px 28px rgba(103, 78, 162, 0.18);
+  --social-bg: rgba(255, 255, 255, 0.05);
+  --social-color: #dcd6ff;
+  --social-hover-color: #a78bfa;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .contact-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* ...existing code... */
+
+
+
+
+
