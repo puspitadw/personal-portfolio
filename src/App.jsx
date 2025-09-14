@@ -346,16 +346,18 @@ export default function App() {
 
                   <div className="flex gap-3 mt-2">
                     <a
-                      href="/CV_PuspitaDewi.pdf"
-                      download
+                      href="/CV%20Puspita%20Dewi.pdf"
+                      download="CV Puspita Dewi.pdf"
                       className="px-4 py-2 rounded-full text-sm font-semibold"
                       style={{
-                        background: themeLight ? "linear-gradient(90deg,#a78bfa,#7c3aed)" : "linear-gradient(90deg,#7c3aed,#a78bfa)",
+                        background: themeLight
+                          ? "linear-gradient(90deg,#a78bfa,#7c3aed)"
+                          : "linear-gradient(90deg,#7c3aed,#a78bfa)",
                         color: "#fff",
                       }}
                     >
                       Download CV
-                    </a>
+                    </a>                  
                   </div>
 
                 </div>

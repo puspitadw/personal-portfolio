@@ -18,4 +18,4 @@ Portfolio website yang menampilkan karya, keterampilan, dan pengalaman saya seba
 - **Animasi Interaktif** - Animasi elegan dengan Framer Motion
 - **Portfolio Projects** - Menampilkan proyek-proyek terbaik
 
-## 📁 Struktur Proyek
+
